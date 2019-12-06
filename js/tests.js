@@ -66,6 +66,22 @@ describe('Testea la funcion buscarRestaurante.', function(){
 describe('Testeando la funcion obtenerRestaurantes del objeto listado', function(){
     it('Se obtiene correctamente la funcion obtenerRestaurantes', function(){
         expect(listado.obtenerRestaurantes(null,null,null).length).to.equal(24);
-    })
-})
+    });
+});
 
+//TEST DE RESERVA
+// precioBase
+describe('Testeando la funcion precioBase del objeto reserva',function(){
+    it('Se calcula de forma correcta el precio base', function(){
+        expect(listadoDeReservas[0].precioBase()).to.equal(2800);
+        expect(listadoDeReservas[1].precioBase()).to.equal(300);
+    });
+});
+
+//precioFinal
+describe('Testeando la funcion precioFinal del objeto reserva', function(){
+    it('Se calcula de forma correcta el precio final', function(){
+        expect(listadoDeReservas[0].precioFinal()).to.equal(2310);
+        expect(listadoDeReservas[1].precioFinal()).to.equal(100);
+    });
+});
